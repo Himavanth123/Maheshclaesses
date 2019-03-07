@@ -1,6 +1,10 @@
  am back to git
 adding this line
 <<<<<<< HEAD
+<<<<<<< HEAD
 adding third line
 =======
 >>>>>>> devops
+=======
+adding third line
+>>>>>>> 04b44bedb8d75ac9ca8e92585b096a20654e4e1c

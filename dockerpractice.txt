@@ -1,0 +1,41 @@
+sudo su
+sudo apt-get update
+
+sudo systemctl start docker
+sudo systemctl enable docker
+
+
+docker images -->it will give avilable image list
+
+docker search image name -->to get partickualr image
+
+docker pull image name -->example :docker pull centos
+docker run -it centos bash -->once u exit from container it wiil stop working
+
+docker ps -a -->it will give history  of our containers
+
+docker run -dt centos bash -->container will run in baground
+docker exec -it containerid bash -->to enter into a container 
+
+docker run --rm -it --name fisrt_container(we will give containe rname which we want to displauy) ubuntu bash -->to avoivd container names
+
+-->docker containers will run on a concept called "Copy on Write" 
+-->we can't images but we can edit container
+-->containers are usually immutable(epehmeral)-->temorary or dispoable.
+if we remove container automatically data also will get remove from container .
+so,to avoid or solve this we got Docker volume and bind mounts.
+
+Working with Volumes:
+1.To keep data around when container is removed.
+2.To share data between host and container 
+few point about volumes:
+1.A data volume is a specially designed directory in the contanier.
+ it is intialized when the container is created.By default it is not deletd
+when container is removed/stopeed.
+  Data volumes can be shared across containers too.
+
+docker volume ls -->to verify volume list
+docker inspect container containerid/containername-->
+docker volume inspect volumeid
+
+
